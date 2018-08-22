@@ -1,0 +1,33 @@
+{
+  "name": "liveshow_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hershin",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "gulp": "latest",
+    "gulp-cssimport": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-file-include": "latest",
+    "gulp-html-beautify": "latest",
+    "gulp-postcss": "latest",
+    "gulp-sourcemaps": "latest",
+    "path": "latest",
+    "postcss": "latest",
+    "postcss-assets": "latest",
+    "postcss-calc": "latest",
+    "postcss-color-rgba-fallback": "latest",
+    "postcss-css-variables": "latest",
+    "postcss-normalize-whitespace": "latest",
+    "postcss-opacity": "latest",
+    "postcss-sprites": "latest",
+    "postcss-will-change": "latest",
+    "precss": "latest",
+    "gulp-webserver": "latest"
+  }
+}

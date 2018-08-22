@@ -1,0 +1,222 @@
+/* 设计稿宽度为750px,根字号为100px */
+:root{
+	--psd: 750;
+	--rfz: 100;
+}
+html{font-size: calc(100vw / var(--psd) * var(--rfz));}
+
+/* modified at 2018-07-12 by hershin */
+/* 页面过宽(大于750px)时内容居中 */
+/* 序列帧动画采用tansform方法时，添加下面查询方式 */
+/* 1px边框问题 */
+
+@media screen and (min-width: 750px) {
+    html{font-size: 100Px;}
+    body{width: 750px;}
+}
+
+/* 解决边框1px问题 */
+/* style中引用语法为：{@mixin border-top-1px border-color;} */
+@define-mixin border-top-1px $border-color {
+    position: relative;
+    &:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-top: 1Px solid $border-color;
+        content: ' ';
+        transform-origin: 0 0;
+    }
+    @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5) {
+       &:before {
+            transform: scaleY(0.7)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio:2) {
+        &:before {
+            transform: scaleY(0.5)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2.5) {
+        &:before {
+            transform: scaleY(0.33333334)
+        }
+    }
+}
+@define-mixin border-bottom-1px $border-color {
+    position: relative;
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-bottom: 1Px solid $border-color;
+        content: ' ';
+        transform-origin: 0 0;
+    }
+    @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5) {
+        &:after {
+            transform: scaleY(0.7)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2) {
+        &:after {
+            transform: scaleY(0.5)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2.5) {
+        &:after {
+            transform: scaleY(0.33333334)
+        }
+    }
+}
+
+@define-mixin border-left-1px $border-color {
+    position: relative;
+    &:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-left: 1Px solid $border-color;
+        content: ' ';
+        transform-origin: 0 0;
+    }
+    @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5) {
+       &:before {
+            transform: scaleX(0.7)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio:2) {
+        &:before {
+            transform: scaleX(0.5)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2.5) {
+        &:before {
+            transform: scaleX(0.33333334)
+        }
+    }
+  }
+  @define-mixin border-right-1px $border-color {
+    position: relative;
+    &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-right: 1Px solid $border-color;
+        content: ' ';
+        transform-origin: 0 0;
+    }
+    @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5) {
+        &:after {
+            transform: scaleX(0.7)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2) {
+        &:after {
+            transform: scaleX(0.5)
+        }
+    }
+    @media (-webkit-min-device-pixel-ratio:2.5), (min-device-pixel-ratio:2.5) {
+        &:after {
+            transform: scaleX(0.33333334)
+        }
+    }
+  }
+
+/* 序列帧变量，多个变量直接加逗号间隔,如.icon_live i,example2 */
+/*
+@custom-selector 
+	:--icon_media 
+		.icon_live i;
+
+@media only screen and (min-width: 1080px){
+  :--icon_media {
+      -webkit-transform:scale(1.44);transform:scale(1.44);
+  }
+}
+@media only screen and (max-width: 1080px){
+  :--icon_media {
+      -webkit-transform:scale(1.44);transform:scale(1.44);
+  }
+}
+@media only screen and (max-width: 960px){
+  :--icon_media {
+      -webkit-transform:scale(1.28);transform:scale(1.28);
+  }
+}
+@media only screen and (max-width: 800px){
+  :--icon_media {
+      -webkit-transform:scale(1.0667);transform:scale(1.0667);
+  }
+}
+@media only screen and (max-width: 750px){
+  :--icon_media {
+      -webkit-transform:scale(1);transform:scale(1);
+  }
+}
+@media only screen and (max-width: 720px){
+  :--icon_media {
+      -webkit-transform:scale(0.96);transform:scale(0.96);
+  }
+}
+@media only screen and (max-width: 640px){
+  :--icon_media {
+      -webkit-transform:scale(0.85333);transform:scale(0.85333);
+  }
+}
+@media only screen and (max-width: 600px){
+  :--icon_media {
+      -webkit-transform:scale(0.8);transform:scale(0.8);
+  }
+}
+@media only screen and (max-width: 540px){
+  :--icon_media {
+      -webkit-transform:scale(0.72);transform:scale(0.72);
+  }
+}
+@media only screen and (max-width: 480px){
+  :--icon_media {
+      -webkit-transform:scale(0.64);transform:scale(0.64);
+  }
+}
+@media only screen and (max-width: 414px){
+  :--icon_media {
+      -webkit-transform:scale(0.552);transform:scale(0.552);
+  }
+}
+@media only screen and (max-width: 400px){
+  :--icon_media {
+      -webkit-transform:scale(0.53333);transform:scale(0.53333);
+  }
+}
+@media only screen and (max-width: 375px){
+  :--icon_media {
+      -webkit-transform:scale(0.5);transform:scale(0.5);
+  }
+}
+@media only screen and (max-width: 360px){
+  :--icon_media {
+      -webkit-transform:scale(0.48);transform:scale(0.48);
+  }
+}
+@media only screen and (max-width: 320px){
+  :--icon_media {
+      -webkit-transform:scale(0.426667);transform:scale(0.426667);
+  }
+}
+@media only screen and (max-width: 240px){
+  :--icon_media {
+      -webkit-transform:scale(0.32);transform:scale(0.32);
+  }
+}
+* /

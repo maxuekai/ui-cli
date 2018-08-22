@@ -1,0 +1,26 @@
+.author:before{content:'author:maxuekai; desgin:; 2017-10-30';display:none;}
+
+/*base*/
+body,button,input,select,textarea{font-family:PingfangSC,'Microsoft YaHei',Arial,sans-serif;outline:none;-webkit-font-smoothing:antialiased;}
+ul,ol{list-style:none;}
+em,i{font-style:normal;}
+body{overflow-x:hidden;width:100%;margin:0;word-wrap:break-word;color:#f9f9f9;background:#000;line-height:1.4;}
+header,ol,ul,input{margin:0;padding:0;}
+dl,dd,h1,h2,h3,h4,h5,h6,p,form{margin:0;font-weight:normal;}
+img{vertical-align:middle;border:0;}
+table{width:auto;border-spacing:0;border-collapse:collapse;}
+a{text-decoration:none;outline:none;}
+a,button,button:active,input{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+mark{color:inherit;background-color:transparent;}
+.hide-txt{text-indent:-9999em;font-size:0;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+
+/*layout*/
+html{font-size:15.625vw;}
+.wp{position: relative;overflow:hidden;}
+
+
+
+/* pop */
+.mask{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0.4);z-index:100;}
+.pop-act {position:fixed;width:4.6rem;height:4.68rem;top:50%;left:50%;margin-top:-2.34rem;margin-left:-2.3rem;z-index:101;}

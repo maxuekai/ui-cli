@@ -1,0 +1,28 @@
+.author:before{content:'author:maxuekai; desgin:; 2018-3-30';display:none;}
+
+.hide-txt{text-indent:-9999em;font-size:0;line-height:0;}
+.clearfix{height:auto!important;}
+em{font-style:normal;}
+
+.wp{width:100%;min-width:990px;overflow:hidden;background-color:#000;background-repeat:no-repeat;background-position:center top;position:relative;}
+.wp .wp-main{width:990px;margin:0 auto;position: relative;}
+html body{line-height:1.5;}
+
+
+
+/* wp-footer */
+.wp-footer .sys_footer .foot{border-top:1px solid;color:#494234;}
+.wp-footer .sys_footer .links a{color:#494234;}
+
+
+
+
+/* pop */
+.mask{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,0.4);z-index:100;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);}
+.pop-act {
+	position:fixed;
+	width:422px;height:430px;
+	top:50%;left:50%;
+	margin-top:-215px;margin-left:-211px;
+	z-index:101;
+}

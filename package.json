@@ -1,0 +1,17 @@
+{
+  "name": "ui-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ui": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maxuekai",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.17.1"
+  }
+}

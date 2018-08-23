@@ -24,6 +24,8 @@ npm i xlui -g
 
 ### usage ###
 ```
+mkdir demo
+cd demo
 ui -v
 ui new [module]
 ```

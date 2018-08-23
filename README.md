@@ -22,5 +22,11 @@ npm i xlui-cli -g
 	  new [module] 		generator new module
 ```
 
+### usage ###
+```
+ui -v
+ui new [module]
+```
+
 More features are coming soon.
 

@@ -14,4 +14,11 @@ program
 		mod(module);
 	});
 
+program
+	.command('hello')
+	.description('test command')
+	.action(() => {
+		console.log('hello world3')
+	});
+
 program.parse(process.argv);
